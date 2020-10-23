@@ -1,11 +1,11 @@
 let cvs = document.getElementById("canvas")
-cvs.height = 700
-cvs.width = 1080;
+cvs.height = 1000
+cvs.width = 1800;
 
 
 var ctx = cvs.getContext("2d");
 ctx.strokeStyle = "red" //画笔的颜色
-ctx.lineWidth = 10 //画笔的粗细
+ctx.lineWidth = 2 //画笔的粗细
 
 var active = false;
 
@@ -29,7 +29,7 @@ cvs.onmousemove = function (event) {
     }
 }
 
-cvs.onmouseout = function () {
+cvs.onmouseover = function () {
     active = false;
 }
 
@@ -40,4 +40,12 @@ drawLine = function (X1, Y1, X2, Y2) {
     ctx.lineTo(X2, Y2);
     ctx.stroke();
     ctx.lineCap = "round"
+}
+
+//笔粗细选择
+var bh = document.getElementById("brush")
+bh.onclick = function () {
+    var bhimg = document.getElementById("brush1")
+    bhimg.classList.add("big")
+    document.getElementById("_brush").classList.add("vi")
 }
