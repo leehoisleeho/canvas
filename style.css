@@ -71,6 +71,7 @@
 }
 .brush:hover{
     cursor : pointer;
+    /* cursor: url('./img/brush2.cur' ),auto */
 }
 
 .brush>img {

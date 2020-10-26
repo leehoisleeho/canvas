@@ -48,7 +48,7 @@ drawLine = function (X1, Y1, X2, Y2) {
 var last_color
 var last_lineWidth
 var last_lineWidth1
-
+canvas.style.cursor = "url('./img/brush2.cur' ),auto"
 //笔粗细选择
 var bh = document.getElementById("brush")
 var bhimg = document.getElementById("brush1")
@@ -58,8 +58,8 @@ bh.onclick = function () {
         console.log(last_lineWidth1)
         ctx.strokeStyle = last_color
         ctx.lineWidth = last_lineWidth
+        canvas.style.cursor = "url('./img/brush2.cur' ),auto"
     }
-
 
     var hasClass = document.getElementById("brush1").classList.contains("big")
     if (hasClass) {
@@ -221,10 +221,11 @@ ru.onclick = function () {
         last_color = ctx.strokeStyle
         last_lineWidth = ctx.lineWidth
         ctx.lineWidth = last_lineWidth1
+        canvas.style.cursor = "url('./img/rubber.cur' ),auto"
     }
     // console.log(last_color)
-    ctx.strokeStyle = "white"
 
+    ctx.strokeStyle = "white"
     var hasClass = document.getElementById("rubbe1").classList.contains("big")
     if (hasClass) {
         document.getElementById("_rubbe").classList.remove("vi")
