@@ -1,13 +1,11 @@
 let cvs = document.getElementById("canvas")
-cvs.height = 1000
-cvs.width = 1800
-
+cvs.height = 720
+cvs.width = 1280
 
 
 var ctx = cvs.getContext("2d");
-ctx.fillStyle = "white";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = "red"
+ctx.fillStyle = "white"; //设置canvas背景颜色
+ctx.fillRect(0, 0, canvas.width, canvas.height); //填充canvas
 ctx.strokeStyle = "" //画笔的颜色
 ctx.lineWidth = 10 //画笔的粗细
 var active = false;
